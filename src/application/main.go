@@ -96,7 +96,7 @@ func main() {
 
     for i, v := range images {
         fmt.Printf("%s\n\n", captions[i][1])
-        photo := CreatePhoto(c.SendMessage, captions[i][1], images[1])
+        photo := CreatePhoto(c.SendMessage, captions[i][1], v[1])
         bot.Send(photo)
     }
 }
