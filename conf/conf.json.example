@@ -1,0 +1,7 @@
+{
+    "telegram": {
+        "bot": "",
+        "token": ""
+    },
+    "send_message": 123456789
+}
