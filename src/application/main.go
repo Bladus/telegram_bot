@@ -88,7 +88,7 @@ func main() {
         log.Printf("ERROR ioutil.ReadAll(response2.Body) :: %v\n", err.Error())
     }
 
-    re2 := regexp.MustCompile(`<img media-type="photo" alt="[^>]+" title="([^>]+)" src="([^>]+)">`)
+    re2 := regexp.MustCompile(`<img media-type="photo" alt="[^>]+" title="[^>]+" src="([^>]+)">`)
     images := re2.FindAllStringSubmatch(string(content2), -1)
 
     cap := regexp.MustCompile(`<div class="article__photo-item-text"><p>([^>]+)</p></div>`)
