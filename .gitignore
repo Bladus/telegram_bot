@@ -1,6 +1,6 @@
 bin
 pkg
 conf/conf.json
-src
+src/*
 !src/application
 info.txt
