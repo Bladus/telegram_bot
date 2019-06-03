@@ -6,7 +6,7 @@ import (
     "log"
 )
 
-func CreatePhoto(chat_id int64, link, caption string) tgbotapi.PhotoConfig {
+func CreatePhoto(chat_id int64, caption, link string) tgbotapi.PhotoConfig {
     photo := tgbotapi.NewPhotoShare(chat_id, link)
     photo.Caption = caption
 
