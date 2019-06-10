@@ -95,7 +95,7 @@ func main() {
     captions := cap.FindAllStringSubmatch(string(content2), -1)*/
 
     for i, v := range images {
-        fmt.Printf("%s\n\n", V[1])
+        fmt.Printf("%s\n\n", v[1])
         photo := CreatePhoto(c.SendMessage, v[1], v[2])
         bot.Send(photo)
     }
