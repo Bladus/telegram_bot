@@ -91,10 +91,7 @@ func main() {
     re2 := regexp.MustCompile(`<img media-type="photo" alt="([^>]+)" title="[^>]+" src="([^>]+)">`)
     images := re2.FindAllStringSubmatch(string(content2), -1)
 
-    /*cap := regexp.MustCompile(`<div class="article__photo-item-text"><p>([^>]+)</p></div>`)
-    captions := cap.FindAllStringSubmatch(string(content2), -1)*/
-
-    for i, v := range images {
+    for _, v := range images {
         fmt.Printf("%s\n\n", v[1])
         photo := CreatePhoto(c.SendMessage, v[1], v[2])
         bot.Send(photo)
